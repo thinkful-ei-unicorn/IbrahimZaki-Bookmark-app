@@ -35,7 +35,9 @@ const generateAddPageTemplate = function() {
             <h3>Add New Bookmark</h3>
             <form class="add-form">
                 <div class="container5">
-                    <input id="name" type="text" aria-label="title" name="name" placeholder="Name" required>
+                    <label for="title">Title</label>
+                    <input id="title" type="text" aria-label="title" name="name" placeholder="Name" required>
+                    <label for="url">URL</label>
                     <input id="url" type="text" aria-label="url" name="url" placeholder="URL" required>
                 </div>
                 <div class="container6">
@@ -66,6 +68,7 @@ const generateAddPageTemplate = function() {
                         <img src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
                     </label>
                 </div>
+                <label for="desc">Description</label>
                 <textarea id="desc" name="description" aria-label="description" required placeholder="Add a description (optional)" rows="4" cols="100"></textarea>
                 <div class="container7">
                     <button id="cancel" aria-label="Cancel add bookmark">Cancel</button>
