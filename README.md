@@ -1,3 +1,13 @@
+Welcome to my bookmark app!
+
+https://thinkful-ei-unicorn.github.io/IbrahimZaki-Bookmark-app/
+
+With this application, you will be able to create bookmarks for all of your favorite websites, complete with a title, link, rating, and description of the site you want to save. Once you have created a bookmark, you will be able to view a list of all your currently saved bookmarks, expand a bookmark to view its details, visit the site, and delete a bookmark from your list. Lastly you will be able to filter your bookmarks by rating to narrow the list based on a given bookmarks stored rating. 
+
+Thank you for visiting and enjoy
+
+
+
 As a user:
 
 I can add bookmarks to my bookmark list. Bookmarks contain:
