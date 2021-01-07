@@ -16,6 +16,7 @@ const generateStartPageTemplate = function() {
                             <legend>Filter</legend>
                             <select id="filter">
                                 <option value="0">Filter</option>
+                                <option value="0">None</option>
                                 <option value="1">1 Star and above</option>
                                 <option value="2">2 Stars and above</option>
                                 <option value="3">3 Stars and above</option>
@@ -38,7 +39,7 @@ const generateAddPageTemplate = function() {
                     <label for="title">Title</label>
                     <input id="title" type="text" aria-label="title" name="name" placeholder="Name" required>
                     <label for="url">URL</label>
-                    <input id="url" type="text" aria-label="url" name="url" placeholder="URL" required>
+                    <input id="url" type="url" aria-label="url" name="url" placeholder="URL" required>
                 </div>
                 <div class="container6">
                     <input type="radio" name="rating" aria-label="1 star" value="1" required>
@@ -148,7 +149,15 @@ const generateError = function(message) {
     `
 }
 
-const render = function() {
+const initialTemplate = `
+<div class="transparent-box">
+<section class="toolbar"></section>
+<section class="error-pop-up"></section>
+<ul class="bookmarks"></ul>
+</div>`
+
+const render = function(filtered) {
+    $('.app').html(initialTemplate)
     let error
     if (store.error) {
         error = generateError(store.error)
@@ -156,7 +165,7 @@ const render = function() {
     }
     let bookmarks = store.bookmarks
     if(store.filter >= 1) {
-        bookmarks = store.filtered
+        bookmarks = filtered
     }
     console.log(bookmarks)
   let html = generateStartPageTemplate()
@@ -172,8 +181,9 @@ const render = function() {
 
 
 const handleNewItemClick = function() {
+    console.log('clicked')
     let html = generateAddPageTemplate()
-    $(".toolbar").on("click", "#add", event => {
+    $(".app").on("click", "#add", event => {
         store.filter = 0
         $(".toolbar").html(html)
 
@@ -181,7 +191,7 @@ const handleNewItemClick = function() {
 }
 
 const handleCreateItemClick = function() {
-    $('.toolbar').on("submit", ".add-form", e => {
+    $('.app').on("submit", ".add-form", e => {
         e.preventDefault()
         const newItem = $(e.currentTarget).serializeArray()
         api.createItem(newItem)
@@ -200,14 +210,15 @@ const handleCreateItemClick = function() {
 }
 
 const handleCancelAddClick = function() {
-    $(".toolbar").on("click", "#cancel", e => {
+    $(".app").on("click", "#cancel", e => {
+        console.log('clicked')
         render()
     })
 }
 
 
 const handleBookmarkClick = function() {
-    $(".bookmarks").on("click", ".list-item", e => {
+    $(".app").on("click", ".list-item", e => {
       let id = $(e.currentTarget).data('item-id')
       store.toggleExpand(id)
       render()
@@ -215,7 +226,7 @@ const handleBookmarkClick = function() {
 }
 
 const handleDeleteClick = function() {
-    $(".bookmarks").on("click", ".delete", e => {
+    $(".app").on("click", ".delete", e => {
         let id = $(e.currentTarget).data('item-id')
         api.deleteItem(id)
         .then(() => {
@@ -231,10 +242,10 @@ const handleDeleteClick = function() {
 }
 
 const handleFilter = function() {
-    $(".toolbar").on("change", "#filter", e => {
+    $(".app").on("change", "#filter", e => {
         store.filter = $("#filter option:selected").val()
-        store.filterList()
-        render()
+        let filter = store.filterList()
+        render(filter)
     })
 }
 

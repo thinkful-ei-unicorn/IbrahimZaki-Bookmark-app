@@ -5,9 +5,6 @@ import bookmark from "./bookmark"
 
 
 const bookmarks = []
-let expanding = false
-let filtered = []
-let adding = false
 let error = null
 let filter = 0
 
@@ -28,8 +25,8 @@ const findAndDelete = function(id) {
 }
 
 const filterList = function() {
-        this.filtered = this.bookmarks.filter(currentItem => currentItem.rating >= this.filter)
-
+        const filtered = this.bookmarks.filter(currentItem => currentItem.rating >= this.filter)
+        return filtered
 }
 
 const updateError = function(error) {
@@ -50,7 +47,6 @@ export default {
     findAndDelete,
     filter,
     filterList,
-    filtered,
     updateError,
     toggleExpand
 }
