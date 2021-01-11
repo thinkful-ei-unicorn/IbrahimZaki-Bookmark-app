@@ -43,30 +43,30 @@ const generateAddPageTemplate = function() {
                 </div>
                 <div class="container6">
                     <input type="radio" name="rating" aria-label="1 star" value="1" required>
-                    <label for="one"> <img src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" /></label>
+                    <label for="one"> <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" /></label>
                     <input type="radio" name="rating" aria-label="2 stars" value="2">
-                    <label for="one"> <img src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" /> <img
-                            src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" /></label>
+                    <label for="one"> <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" /> <img
+                    alt="ratings in stars" src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" /></label>
                     <input type="radio" name="rating" aria-label="3 stars" value="3">
                     <label for="three">
-                        <img src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
-                        <img src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
-                        <img src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
+                        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
+                        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
+                        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
                     </label>
                     <input type="radio" name="rating" aria-label="4 stars" value="4">
                     <label for="four">
-                        <img src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" /> <img
-                            src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
-                        <img src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" /> <img
-                            src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
+                        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" /> <img
+                        alt="ratings in stars" src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
+                        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" /> <img
+                        alt="ratings in stars" src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
                     </label>
                     <input type="radio" name="rating" aria-label="5 stars" value="5">
                     <label for="five">
-                        <img src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
-                        <img src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
-                        <img src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
-                        <img src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
-                        <img src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
+                        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
+                        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
+                        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
+                        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
+                        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/35/000000/filled-star.png" />
                     </label>
                 </div>
                 <label for="desc">Description</label>
@@ -83,30 +83,30 @@ const generateAddPageTemplate = function() {
 const generateBookmarks = function(element) {
     let stars
     if (element.rating == 1) {
-        stars = `<img src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />`
+        stars = `<img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />`
     }
     if (element.rating == 2) {
-        stars = `<img src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
-        <img src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />`
+        stars = `<img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
+        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />`
     }
     if (element.rating == 3) {
-        stars = `<img src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
-        <img src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
-        <img src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />`
+        stars = `<img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
+        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
+        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />`
     }
     if (element.rating == 4) {
-        stars = `<img src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
-        <img src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
-        <img src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
-        <img src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />`
+        stars = `<img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
+        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
+        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
+        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />`
 
     }
     if (element.rating == 5) {
-        stars = `<img src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
-        <img src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
-        <img src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
-        <img src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
-        <img src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />`
+        stars = `<img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
+        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
+        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
+        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />
+        <img alt="ratings in stars" src="https://img.icons8.com/carbon-copy/50/000000/filled-star.png" />`
     }
 
     let unexpanded = `
